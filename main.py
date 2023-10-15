@@ -59,20 +59,23 @@ while game_on:
 
     snake.move()
 
+    # snake eats food
     if snake.body[0].distance(food) < 15:
         food.refresh()
         scoreboard.increase_score()
         snake.extend()
 
+    # snake collides with its tail
     for segment in snake.body[1:]:
         if snake.body[0].distance(segment) < 10:
-            game_on = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
             print("Snake hit its tail.")
 
+    # snake collides with a wall
     if abs(snake.body[0].xcor()) > WALL_POSITION or abs(snake.body[0].ycor()) > WALL_POSITION:
-        game_on = False
-        scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
         print("Snake hit the wall.")
 
 screen.exitonclick()

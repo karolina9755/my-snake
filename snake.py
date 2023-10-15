@@ -56,3 +56,12 @@ class Snake:
     def extend(self):
         self.add_body_segment()
         self.body[-1].goto(self.body[-2].pos())
+
+    def reset(self):
+        for segment in self.body:
+            segment.hideturtle()
+            segment.clear()
+        self.body = []
+        for i in range(3):
+            self.add_body_segment()
+            self.body[i].setx(-20 * i)
