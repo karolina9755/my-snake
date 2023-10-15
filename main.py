@@ -17,11 +17,6 @@ food = Food()
 scoreboard = Scoreboard()
 
 
-# f = Food()
-# f.color("magenta")
-# f.goto(WALL_POSITION-10,WALL_POSITION-10)
-
-
 def draw_wall():
     wall = Turtle()
     wall.hideturtle()

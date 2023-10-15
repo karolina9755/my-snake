@@ -7,8 +7,8 @@ LEFT = 180
 RIGHT = 0
 
 SNAKE_COLOR = "aqua"
-colors = ["Pink", "PaleVioletRed", "HotPink", "DeepPink", "MediumVioletRed"]
-#colors = ["Red", "Orange", "Yellow", "Lime", "Cyan", "Blue", "Indigo"]
+colors = ["Pink", "PaleVioletRed", "HotPink", "DeepPink", "MediumVioletRed"] # PINKS
+#colors = ["Red", "Orange", "Yellow", "Lime", "Cyan", "Blue", "Indigo"] # RAINBOW
 COLOR_PALETTE = colors + colors[-2:0:-1]
 NUMBER_OF_COLORS = len(COLOR_PALETTE)
 
